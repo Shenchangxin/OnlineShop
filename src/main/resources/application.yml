@@ -1,0 +1,57 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /shop
+    multipart:
+      max-file-size: 10MB 
+      max-request-size: 100MB
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/db_shopmaster?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.shenchangxin.store.entity
+
+devtools:
+  restart:
+    enabled: true
+
+pagehelper:
+  pagehelperDialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+
+
+logging:
+  level:
+    com.zhang.ssmschoolshop.dao: DEBUG
+
+
+mail:
+  host: smtp.qq.com
+  username: 1452212104@qq.com
+  password: ngwtfshywjpajihi1
+  default-encoding: UTF-8
+  protocol: smtp
+  properties:
+    mail:
+      smtp:
+        ssl:
+          enable: true
+
+  from: 1452212105@qq.com
+  receive:  1452212101@qq.com
+  receive2: 1452212102@qq.com
+  test-connection: false
