@@ -9,6 +9,8 @@ import com.shenchangxin.store.service.OrderService;
 import com.shenchangxin.store.service.UserService;
 import com.shenchangxin.store.util.Md5Util;
 import com.shenchangxin.store.util.Msg;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModelProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -223,13 +225,7 @@ public class CustomerController {
         return Msg.success("删除成功");
     }
 
-    /**
-     * 收藏商品
-     * @param pn
-     * @param request
-     * @param model
-     * @return
-     */
+
     @RequestMapping("/info/favorite")
     public String showFavorite(@RequestParam(value = "page", defaultValue = "1") Integer pn, HttpServletRequest request, Model model) {
         HttpSession session = request.getSession();
