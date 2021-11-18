@@ -96,6 +96,17 @@
     </if>
   </select>
 
+<!--  <select id="selectGoodByGoodsId" parameterType="java.util.List" resultMap="BaseResultMap">-->
+<!--    select   goodsId,goodsName,price,num,upTime,category,detailCate,activityId,description from goods WHERE goodsId in-->
+<!--    <if test="goodsIdList != null">-->
+<!--    <foreach collection="goodsIdList" index="index" item="item" open="(" separator="," close=")">-->
+<!--      #{item}-->
+<!--    </foreach>-->
+<!--    </if>-->
+<!--  </select>-->
+
+
+
   <select id="selectByExampleWithBLOBsLimit" parameterType="com.shenchangxin.store.entity.GoodsExample" resultMap="ResultMapWithBLOBs">
     select
     <if test="distinct">

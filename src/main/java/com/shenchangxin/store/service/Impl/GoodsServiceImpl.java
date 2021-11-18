@@ -87,4 +87,10 @@ public class GoodsServiceImpl implements GoodsService {
     public List<Favorite> selectFavByExample(FavoriteExample favoriteExample) {
         return favoriteMapper.selectByExample(favoriteExample);
     }
+
+    //@Override
+//    public List<Goods> selectGoodByGoodsId(List<Integer> goodsIdList){
+//        return goodsMapper.selectGoodByGoodsId(goodsIdList);
+//    }
+
 }

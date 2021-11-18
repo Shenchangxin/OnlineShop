@@ -6,13 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.UUID;
 
-/**
- * @author created by Zhangdazhuang
- * @version v.0.1
- * @Description 根据操作系统的不同保存到不同路径
- * @date 2019/4/30
- * @备注
- **/
+
 public class ImageUtil {
 
     public static String imagePath(MultipartFile file, String shopName) {

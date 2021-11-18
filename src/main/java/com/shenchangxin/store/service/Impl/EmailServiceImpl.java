@@ -44,7 +44,6 @@ public class EmailServiceImpl implements EmailService {
         EmailSend emailSend = new EmailSend();
         emailSend.setSubject("用户购买信息");
         emailSend.setContent("today is " + LocalDate.now() + ",有新用户购买");
-//        emailSend.setReceivers();
         log.info("开始发送邮件了");
         SimpleMailMessage message = new SimpleMailMessage();
         //谁发的

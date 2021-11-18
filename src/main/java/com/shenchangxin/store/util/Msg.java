@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Msg {
-    //100-success,200-fail
     private int code;
 
     //提示信息

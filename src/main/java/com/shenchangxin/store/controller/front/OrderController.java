@@ -7,15 +7,11 @@ import com.shenchangxin.store.util.Msg;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.MailException;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import javax.servlet.http.HttpSession;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -42,8 +38,8 @@ public class OrderController {
     @Autowired
     private ActivityService activityService;
 
-    @Autowired
-    private EmailService emailService;
+//    @Autowired
+//    private EmailService emailService;
 
     @RequestMapping("/order")
     public String showOrder(HttpSession session, Model model) {
@@ -119,7 +115,7 @@ public class OrderController {
         return "orderConfirm";
     }
 
-    @RequestMapping("/orderFinish")
+    @RequestMapping(value = "/orderFinish")
     @ResponseBody
     public Msg orderFinish(Float oldPrice, Float newPrice, Boolean isPay, Integer addressid, HttpSession session) {
 
@@ -146,7 +142,7 @@ public class OrderController {
             orderService.insertOrderItem(new OrderItem(null, orderId, cart.getGoodsid(), cart.getGoodsnum()));
         }
         // 购买成功通知管理员
-        emailService.sendEmailToAdmin();
+        //emailService.sendEmailToAdmin();
         return Msg.success("购买成功");
     }
 

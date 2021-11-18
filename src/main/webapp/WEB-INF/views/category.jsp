@@ -1,9 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: zhangxin
-  Date: 2019/5/13
-  Time: 15:45
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -12,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>合家欢商城-搜索${keyword}</title>
+    <title>类别</title>
     <script src="${pageContext.request.contextPath}/js/jquery.js"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap/css/bootstrap.min.css">
@@ -44,7 +39,7 @@
         <div class="module">
             <div class="">
                 <h3>
-                    搜索结果><span style="color: red;">${keyword}</span>
+                    类别><span style="color: red;">${cate}</span>
                 </h3>
                 <hr>
             </div>
@@ -133,7 +128,6 @@
                                         </a>
                                     </li>
                                 </c:if>
-
                             </ul>
                         </nav>
                     </div>
@@ -144,3 +138,4 @@
 </div>
 </body>
 </html>
+

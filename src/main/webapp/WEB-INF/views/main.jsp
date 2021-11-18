@@ -51,7 +51,7 @@
             <div class="sort">
                 <div class="sort-channel">
                     <ul class="sort-channel-list list-group">
-                        <li class="list-group-item"><a href="${pageContext.request.contextPath}/category?cate=数码">麻将桌</a>
+                        <li class="list-group-item"><a href="${pageContext.request.contextPath}/category?cate=家电">麻将桌</a>
                         </li>
                     </ul>
                 </div>
@@ -96,54 +96,7 @@
     </div>
     <div class="content">
 
-        <c:if test="${!empty digGoods}">
-            <div class="module">
-                <div class="hd">
-                    <h2>自动麻将桌</h2>
-                    <hr>
-                </div>
 
-                <div class="bd">
-                    <div class="data">
-                        <ul>
-                            <c:forEach items="${digGoods}" var="goods">
-                                <li class="data-item-li">
-                                    <div class="to-big">
-                                        <a href="${pageContext.request.contextPath}/detail?goodsid=${goods.goodsid}"><img src="${pageContext.request.contextPath}/pictures/${goods.imagePaths[0].path}" alt=""
-                                                        width="200" height="200"/>
-                                        </a>
-                                    </div>
-                                    <p class="text-right">
-                                        <a href="${pageContext.request.contextPath}/detail?goodsid=${goods.goodsid}">${goods.goodsname}</a>
-                                    </p>
-                                    <div class="text-right">
-                                        <b>￥${goods.price}</b>
-                                    </div>
-                                    <div>
-                                        <c:if test="${goods.fav}">
-                                            <button
-                                                    class="like-button glyphicon glyphicon-heart btn btn-default"
-                                                    data-id="${goods.goodsid}"
-                                                    style="display: none;"></button>
-                                        </c:if>
-                                        <c:if test="${!goods.fav}">
-                                            <button
-                                                    class="like-button glyphicon glyphicon-heart-empty btn btn-default"
-                                                    data-id="${goods.goodsid}"
-                                                    style="display: none;"></button>
-                                        </c:if>
-                                        <!-- <button class="like-button1 glyphicon glyphicon-heart-empty btn btn-default "></button> -->
-                                    </div>
-                                </li>
-                            </c:forEach>
-
-
-                            <div class="clear-float" style="clear: both;"></div>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </c:if>
 
         <c:if test="${!empty houseGoods}">
             <div class="module">
@@ -190,55 +143,6 @@
                             <div class="clear-float" style="clear: both;"></div>
                         </ul>
 
-                    </div>
-                </div>
-            </div>
-        </c:if>
-
-        <c:if test="${!empty colGoods}">
-            <div class="module">
-                <div class="hd">
-                    <h2>非自动麻将桌</h2>
-                    <hr>
-                </div>
-
-                <div class="bd">
-                    <div class="data">
-                        <ul>
-                            <c:forEach items="${colGoods}" var="colgoods">
-                                <li class="data-item-li">
-                                    <div class="to-big">
-                                        <a href="${pageContext.request.contextPath}/detail?goodsid=${colgoods.goodsid}"> <img
-                                                src="${pageContext.request.contextPath}/pictures/${colgoods.imagePaths[0].path}" alt=""
-                                                width="200" height="200">
-                                        </a>
-                                    </div>
-                                    <p class="text-right">
-                                        <a href="${pageContext.request.contextPath}/detail?goodsid=${colgoods.goodsid}">${colgoods.goodsname}</a>
-                                    </p>
-                                    <div class="text-right">
-                                        <b>￥${colgoods.price}</b>
-                                    </div>
-                                    <div>
-                                        <c:if test="${colgoods.fav}">
-                                            <button
-                                                    class="like-button glyphicon glyphicon-heart btn btn-default"
-                                                    data-id="${colgoods.goodsid}"
-                                                    style="display: none;"></button>
-                                        </c:if>
-                                        <c:if test="${!colgoods.fav}">
-                                            <button
-                                                    class="like-button glyphicon glyphicon-heart-empty btn btn-default"
-                                                    data-id="${colgoods.goodsid}"
-                                                    style="display: none;"></button>
-                                        </c:if>
-                                        <!-- <button class="like-button1 glyphicon glyphicon-heart-empty btn btn-default "></button> -->
-                                    </div>
-                                </li>
-                            </c:forEach>
-
-                            <div class="clear-float" style="clear: both;"></div>
-                        </ul>
                     </div>
                 </div>
             </div>

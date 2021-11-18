@@ -1,17 +1,3 @@
-/*
-Navicat MySQL Data Transfer
-
-Source Server         : 127.0.0.1
-Source Server Version : 80019
-Source Host           : localhost:3306
-Source Database       : db_shopmaster
-
-Target Server Type    : MYSQL
-Target Server Version : 80019
-File Encoding         : 65001
-
-Date: 2021-07-24 17:18:18
-*/
 
 SET FOREIGN_KEY_CHECKS=0;
 
@@ -60,7 +46,7 @@ CREATE TABLE `address` (
 -- Records of address
 -- ----------------------------
 INSERT INTO `address` VALUES ('7', '1', '北京市', '北京市市辖区', '东城区', '12312', '123123', '2131231321');
-INSERT INTO `address` VALUES ('8', '3', '湖南省', '长沙市', '雨花区', '长沙理工大学', '张鑫', '18229189406');
+INSERT INTO `address` VALUES ('8', '3', '河南省', '郑州市', '金水区', '郑州航空工业管理学院', '申长鑫', '18338985721');
 
 -- ----------------------------
 -- Table structure for admin
@@ -91,11 +77,9 @@ CREATE TABLE `category` (
 -- ----------------------------
 -- Records of category
 -- ----------------------------
-INSERT INTO `category` VALUES ('1', '数码');
-INSERT INTO `category` VALUES ('2', '服饰');
+
 INSERT INTO `category` VALUES ('3', '家电');
-INSERT INTO `category` VALUES ('4', '书籍');
-INSERT INTO `category` VALUES ('5', '其他');
+
 
 -- ----------------------------
 -- Table structure for collection
@@ -183,13 +167,13 @@ CREATE TABLE `goods` (
 -- ----------------------------
 -- Records of goods
 -- ----------------------------
-INSERT INTO `goods` VALUES ('93', '测试商品1', '10', '29', '2019-05-10 19:43:04', '1', '测试', '这是测试商品1', '1');
-INSERT INTO `goods` VALUES ('94', '测试商品2', '23', '34', '2019-05-10 19:44:28', '2', '测试', '这是测试商品2', '1');
-INSERT INTO `goods` VALUES ('95', '这是测试商品', '123', '1231', '2019-05-11 11:41:24', '1', '测试', '测试商品', '1');
-INSERT INTO `goods` VALUES ('96', '测试商品4', '213', '222', '2019-05-11 11:42:00', '1', '12321', '这是一个测试商品4', '1');
-INSERT INTO `goods` VALUES ('97', '测试商品5', '213', '212', '2019-05-13 10:22:58', '1', '测试', '这是测试商品', '1');
-INSERT INTO `goods` VALUES ('98', 'test商品1', '10', '100', '2021-07-24 11:50:07', '1', '测试', '测试商品', '1');
-INSERT INTO `goods` VALUES ('99', '1231', '1231', '1231', '2021-07-24 11:51:20', '1', '1231231', '1231', '1');
+INSERT INTO `goods` VALUES ('93', '豪华麻将桌', '10', '29', '2019-05-10 19:43:04', '1', '麻将桌', '全自动麻将桌', '1');
+INSERT INTO `goods` VALUES ('94', '豪华麻将桌', '23', '34', '2019-05-10 19:44:28', '2', '麻将桌', '全自动麻将桌', '1');
+INSERT INTO `goods` VALUES ('95', '豪华麻将桌', '123', '1231', '2019-05-11 11:41:24', '1', '麻将桌', '全自动麻将桌', '1');
+INSERT INTO `goods` VALUES ('96', '豪华麻将桌', '213', '222', '2019-05-11 11:42:00', '1', '麻将桌', '全自动麻将桌', '1');
+INSERT INTO `goods` VALUES ('97', '豪华麻将桌', '213', '212', '2019-05-13 10:22:58', '1', '麻将桌', '全自动麻将桌', '1');
+INSERT INTO `goods` VALUES ('98', '豪华麻将桌', '10', '100', '2021-07-24 11:50:07', '1', '麻将桌', '全自动麻将桌', '1');
+INSERT INTO `goods` VALUES ('99', '豪华麻将桌', '1231', '1231', '2021-07-24 11:51:20', '1', '麻将桌', '全自动麻将桌', '1');
 
 -- ----------------------------
 -- Table structure for imagepath
@@ -207,23 +191,23 @@ CREATE TABLE `imagepath` (
 -- ----------------------------
 -- Records of imagepath
 -- ----------------------------
-INSERT INTO `imagepath` VALUES ('114', '93', '3a25测试商品1新公司录用offer.png');
-INSERT INTO `imagepath` VALUES ('115', '93', '6a7b测试商品1原公司解约通知.png');
-INSERT INTO `imagepath` VALUES ('116', '94', 'c1a9测试商品2user3.png');
-INSERT INTO `imagepath` VALUES ('117', '95', 'bd30这是测试商品QQ浏览器截图20181120200039.png');
-INSERT INTO `imagepath` VALUES ('118', '96', '94e9123QQ浏览器截图20180925163930.png');
-INSERT INTO `imagepath` VALUES ('119', '96', '7c68123QQ浏览器截图20181120200033.png');
-INSERT INTO `imagepath` VALUES ('120', '96', '669e123QQ浏览器截图20181120200038.png');
-INSERT INTO `imagepath` VALUES ('121', '97', 'c2e5测试商品5QQ浏览器截图20180628082816.png');
-INSERT INTO `imagepath` VALUES ('122', '97', '61dd测试商品5QQ浏览器截图20180910091336.png');
-INSERT INTO `imagepath` VALUES ('123', '97', '0f0b测试商品5QQ浏览器截图20180917082049.png');
-INSERT INTO `imagepath` VALUES ('124', '97', '8020测试商品5QQ浏览器截图20180925163930.png');
-INSERT INTO `imagepath` VALUES ('125', '97', 'd8f2测试商品5QQ浏览器截图20181120200033.png');
-INSERT INTO `imagepath` VALUES ('126', '97', '776b测试商品5QQ浏览器截图20181120200038.png');
-INSERT INTO `imagepath` VALUES ('127', '97', '65be测试商品5QQ浏览器截图20181120200039.png');
-INSERT INTO `imagepath` VALUES ('128', '97', 'c2a3测试商品5QQ浏览器截图20190307101645.png');
-INSERT INTO `imagepath` VALUES ('129', '98', 'a0a9test商品1复制算法.png');
-INSERT INTO `imagepath` VALUES ('130', '99', 'false');
+INSERT INTO `imagepath` VALUES ('114', '93', '../image/img01.png');
+INSERT INTO `imagepath` VALUES ('115', '93', '../image/img02.png');
+INSERT INTO `imagepath` VALUES ('116', '94', '../image/img03.png');
+INSERT INTO `imagepath` VALUES ('117', '95', '../image/img04.png');
+INSERT INTO `imagepath` VALUES ('118', '96', '../image/img05.png');
+INSERT INTO `imagepath` VALUES ('119', '96', '../image/img06.png');
+INSERT INTO `imagepath` VALUES ('120', '96', '../image/img08.png');
+INSERT INTO `imagepath` VALUES ('121', '97', '../image/img09.png');
+INSERT INTO `imagepath` VALUES ('122', '97', '../image/img10.png');
+INSERT INTO `imagepath` VALUES ('123', '97', '../image/img01.png');
+INSERT INTO `imagepath` VALUES ('124', '97', '../image/img02.png');
+INSERT INTO `imagepath` VALUES ('125', '97', '../image/img03.png');
+INSERT INTO `imagepath` VALUES ('126', '97', '../image/img04.png');
+INSERT INTO `imagepath` VALUES ('127', '97', '../image/img05.png');
+INSERT INTO `imagepath` VALUES ('128', '97', '../image/img06.png');
+INSERT INTO `imagepath` VALUES ('129', '98', '../image/img01.png');
+INSERT INTO `imagepath` VALUES ('130', '99', '../image/img08.png');
 
 -- ----------------------------
 -- Table structure for indent
@@ -326,7 +310,7 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', 'root', '25d55ad283aa400af464c76d713c07ad', '2019-04-18 17:16:34', '916877983@qq.com', '18229819406');
-INSERT INTO `user` VALUES ('2', 'codingzx', '25d55ad283aa400af464c76d713c07ad', '2019-04-22 15:29:12', '994683607@qq.com', '18229819406');
+INSERT INTO `user` VALUES ('1', 'scx', '25d55ad283aa400af464c76d713c07ad', '2019-04-18 17:16:34', '282578874@qq.com', '18338985721');
+INSERT INTO `user` VALUES ('2', 'shenchangxin', '25d55ad283aa400af464c76d713c07ad', '2019-04-22 15:29:12', '282578874@qq.com', '18338985721');
 INSERT INTO `user` VALUES ('3', 'admin', '25d55ad283aa400af464c76d713c07ad', '2019-05-16 10:46:46', '123123', '1231321');
 SET FOREIGN_KEY_CHECKS=1;

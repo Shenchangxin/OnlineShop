@@ -187,7 +187,7 @@ public class CustomerController {
         orderExample.or().andUseridEqualTo(user.getUserid());
 
         List<Order> orderList = orderService.selectOrderByExample(orderExample);
-        orderModel.addAttribute("orderList", orderList);
+        //orderModel.addAttribute("orderList", orderList);
         Order order;
         OrderItem orderItem;
         List<OrderItem> orderItemList = new ArrayList<>();
@@ -204,9 +204,17 @@ public class CustomerController {
                 orderItem = orderItemList.get(j);
                 goodsIdList.add(orderItem.getGoodsid());
             }
-            GoodsExample goodsExample = new GoodsExample();
-            goodsExample.or().andGoodsidIn(goodsIdList);
-            goodsList = goodsService.selectByExample(goodsExample);
+//            GoodsExample goodsExample = new GoodsExample();
+//            goodsExample.or().andGoodsidIn(goodsIdList);
+//            goodsList = goodsService.selectGoodByGoodsId(goodsIdList);
+//            order.setGoodsInfo(goodsList);
+
+            if (goodsIdList.size()>0){
+                goods = goodsService.selectById(goodsIdList.get(0));
+                goodsList.add(goods);
+            }
+            //goods = goodsService.selectById(goodsIdList.get(0));
+            //goodsList.add(goods);
             order.setGoodsInfo(goodsList);
             address = addressService.selectByPrimaryKey(order.getAddressid());
             order.setAddress(address);
